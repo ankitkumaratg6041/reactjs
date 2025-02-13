@@ -38,3 +38,14 @@ eg:
  const heading = React.createElement('h1', {id:"mainHeading", class:"textColorRed"}, 'hello world! from react');
 ```
 and the third parameter is the children of the tag in this case 'h1' so the content 'hello world! from react' is the children of 'h1'
+# what does ```React.createElement()``` returns and what does ```render()``` method do?
+```React.createElement()``` returns a react element or an object and not a simple HTML element which is passed as an argument to ```root.render()``` method which then process this and this actually creates the tag which is then rendered on the screen 
+so for example: createElement() doesn't creates ```h1``` tag but a react element/object which has all information related to this h1 tag like what the element actually is, what are it's attributes if any, and what content it has which is then processed by render() method and is convereted to an actual HTML element.
+# why is key needed in react when rendering siblings?
+In React, the key prop is used to uniquely identify elements in a list. This helps React optimize the rendering process by efficiently updating and reordering elements. Without a unique key, React would have difficulty determining which items have changed, been added, or removed, leading to potential performance issues and incorrect rendering.
+
+Here's a more detailed explanation:
+
+Identification: Keys help React identify which items have changed, are added, or are removed.
+Performance: By using keys, React can minimize the number of DOM operations, making updates more efficient.
+Consistency: Keys ensure that the component state is preserved correctly across re-renders.
