@@ -103,6 +103,18 @@ In a Node.js project, dependencies are categorized into several types based on t
 
 By categorizing dependencies appropriately, you can manage your project's dependencies more effectively and ensure a smoother development and production process.
 
+# What is the difference between ```npm install parcel``` and ```npm install -D parcel```?
+The difference between ```npm i parcel``` and ```npm i -D parcel``` lies in how the package is installed and where it gets listed in your package.json file.
+### **1. npm i parcel**
+- This command is equivalent to npm install parcel or npm install parcel --save.
+- It installs Parcel as a dependency in the dependencies section of package.json.
+- Use case: When the package is needed for production as well as development. For example, if you were installing a library like react or express, it would go under dependencies since it is required for the actual application to function.
+
+### **2. npm i -D parcel**
+- This command is equivalent to npm install parcel --save-dev.
+- It installs Parcel as a development dependency, adding it to the devDependencies section of package.json.
+- Use case: When the package is only needed for development purposes and not for production. Build tools, linters, and test frameworks (like parcel, webpack, jest, eslint) are usually installed as dev dependencies because they are not needed in the final production build.
+
 # What is the difference between caret(^) and tilde(~) in package.json?
 In package.json, caret (^) and tilde (~) are used to specify version ranges for dependencies. Here's the difference between them:
 
@@ -170,3 +182,32 @@ package.json and ```package-lock.json``` are both important files in a Node.js p
 - **Performance:** Speeds up the installation process by allowing npm to skip resolving version ranges and directly install the specified versions.  
 In summary, ```package.json``` defines the dependencies and their version ranges, while ```package-lock.json``` locks those dependencies to specific versions to ensure consistency, security, and performance.
 
+# Parcel
+- Dev Build
+- Local Server
+- HMR - Hot Module Replacement
+- File Watching Algorithm - written in C++
+- Caching - Faster Builds
+- Image Optimization
+- Minification
+- Bundling
+- Compress Files
+- Consistent Hashing
+- Code Splitting
+- Differential Bundling - support older browsers
+- Diagnostic
+- Error Handling
+- HTTPs
+- Tree Shaking - removes unused code
+- Different dev and prod bundles
+
+# What is the difference between ```npx parcel index.html``` and ```npx parcel build index.html```
+```npx parcel index.html``` creates dev build which is a compressed version of our code while ```npx parcel bild index.html``` creates a production build of our code which is highly compressed version of our code
+
+## Read about **browserslist**.
+It is used in package.json file and it is used to tell what versions of the browsers can support your app
+```json
+"browserslist": [
+    "last 2 versions"
+  ]
+```
