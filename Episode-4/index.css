@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: #fdfcf3
+}
+
+.header-container{
+    border-bottom: 2px solid #EB5B00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.logo-container{
+    border: 1px solid green;
+    padding: 0;
+    height: 80px;
+    width: 80px;
+}
+.logo-container img{
+    width: 100%;
+    height: 100%;
+}
+.nav-list{
+    display: flex;
+    list-style-type: none;
+}
+.nav-list li{
+    font-size: 35px;
+    font-weight: bold;
+    color: #EB5B00;
+    margin-right: 80px;
+    transition: 0.3s ease;
+}
+li:hover{
+    cursor: pointer;
+    color: #FF9D23;
+}
+
+/*
+    Body Component Styling
+*/
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 80px;
+}
+.search-container input{
+    width: 50%;
+    height: 100%;
+    padding: 0 20px;
+    border: 1px solid #EB5B00;
+    border-radius: 5px;
+    font-size: 25px;
+    outline: none;
+    margin-right: 10px;
+}
+.search-container button{
+    height: 100%;
+    padding: 0 30px;
+    background-color: #EB5B00;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.search-container button:hover{
+    background-color: #FF9D23;
+    font-weight: bold;
+}
+
+.res-card-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px;
+    scrollbar-width: none;
+}
+/* Hide scrollbar for WebKit-based browsers (Chrome, Safari, Edge) */
+.res-card-container::-webkit-scrollbar {
+    display: none;
+}
+.restaurant-container{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.card-image-container{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+}
+.card-image-container img{
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    max-width: 100%;
+    height: 100%;
+}
+.card-info{
+    padding: 0 20px;
+
+}
+.card-info .tags{
+    font-size: 16px;
+    color: #ADA991;
+    margin-bottom: 0;
+}
+.card-info .rating-time{
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.restaurant-container button{
+    padding: 15px 20px;
+    width: 100%;
+    background-color: #EB5B00;
+    border: none;
+    outline: none;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.restaurant-container button:hover{
+    background-color: #f0782e;
+}
+
+/*
+    Footer Component Styling
+*/
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    color: white;
+    font-size: 25px;
+    /* font-weight: bold; */
+    margin-top: 100px;
+    padding: 20px 150px;
+}
+.footer-container .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid green; */
+    width: 100%;
+    /* padding: 20px 50px; */
+    gap: 50px;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+.footer-links ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-address-contact{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 50px;
+    flex: 2;
+}
+.footer-address-contact .footer-contact{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+.footer-address-contact .footer-contact form{
+    display: flex;
+    flex-direction: column;
+}
+.footer-address{
+    flex: 1;
+}
+.footer-address-contact .footer-contact form input,textarea{
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.footer-address-contact .footer-contact form textarea{
+    height: 100px;
+    padding: 5px 10px;
+}
+.footer-address-contact .footer-contact button{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #EB5B00;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.footer-address-contact .footer-contact button:hover{
+    background-color: #f0782e;
+}
+.footer-address{
+    font-weight: 400;
+    font-size: 18px;
+}
+.footer-address p{
+    margin: 0;
+}
+.footer-address .address{
+    margin-bottom: 15px;
+}
+.footer-address .footer-title{
+    font-weight: bold;
+}
