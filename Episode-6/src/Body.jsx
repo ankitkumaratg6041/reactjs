@@ -14,23 +14,8 @@ const Body = () => {
     }
 
     
-    const findRestaurants = (searchedRestaurant) => { 
-        if(searchedRestaurant === '') {
-            setListOfRestaurants(Restaurants);
-            return;
-        }
-        const pickedRestaurant = Restaurants.filter((restaurant) => restaurant.data.name.toLowerCase().includes(searchedRestaurant.toLowerCase()));
-        const pickedByCuisine = Restaurants.filter((restaurant) => restaurant.data.cuisines.join().toLowerCase().includes(searchedRestaurant.toLowerCase()));
-
-        // If the restaurant is not found by name, then search by cuisine and if there are duplicate restaurants, remove them
-        const combinedRestaurants = [...pickedRestaurant, ...pickedByCuisine];
-        const restaurantMap = {};
-        for (const restaurant of combinedRestaurants) { 
-            if(!restaurantMap[restaurant.data.id]) {
-                restaurantMap[restaurant.data.id] = restaurant;
-            }
-        }
-        setListOfRestaurants(Object.values(restaurantMap));
+    const findRestaurants = (finalListOfSearchedRestaurants) => { 
+        setListOfRestaurants(finalListOfSearchedRestaurants);
     }
     return (
         <div>
