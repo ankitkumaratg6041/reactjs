@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react";
-import { Restaurants } from "../utils/mockData";
 
-const Search = ({resResult}) => { 
+const Search = ({resResult, resData}) => { 
     const [searchValue, setSearchValue] = useState('');
+    const Restaurants = resData;
 
     const findRestaurants = () => { 
         if(searchValue === '') {
             resResult(Restaurants);
             return;
         }
-        const pickedRestaurant = Restaurants.filter((restaurant) => restaurant.data.name.toLowerCase().includes(searchValue.toLowerCase()));
-        const pickedByCuisine = Restaurants.filter((restaurant) => restaurant.data.cuisines.join().toLowerCase().includes(searchValue.toLowerCase()));
+        const pickedRestaurant = Restaurants.filter((restaurant) => restaurant.card.card.info.name.toLowerCase().includes(searchValue.toLowerCase()));
+        const pickedByCuisine = Restaurants.filter((restaurant) => restaurant.card.card.info.cuisines.join().toLowerCase().includes(searchValue.toLowerCase()));
 
         // If the restaurant is not found by name, then search by cuisine and if there are duplicate restaurants, remove them
         const combinedRestaurants = [...pickedRestaurant, ...pickedByCuisine];
         const restaurantMap = {};
         for (const restaurant of combinedRestaurants) { 
-            if(!restaurantMap[restaurant.data.id]) {
-                restaurantMap[restaurant.data.id] = restaurant;
+            if(!restaurantMap[restaurant.card.card.info.id]) {
+                restaurantMap[restaurant.card.card.info.id] = restaurant;
             }
         }
+        console.log(restaurantMap)
         resResult(Object.values(restaurantMap));
     }
 

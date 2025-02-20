@@ -94,6 +94,10 @@ li:hover{
     font-weight: bold;
 }
 
+/*
+    Restaurant Card Styling
+*/
+
 .res-card-container{
     display: flex;
     align-items: center;
@@ -125,8 +129,11 @@ li:hover{
 .card-image-container img{
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-    max-width: 100%;
+    min-width: 100%;
     height: 100%;
+}
+.res-card-title{
+    font-size: 20px;
 }
 .card-info{
     padding: 0 20px;
@@ -257,4 +264,49 @@ li:hover{
 }
 .footer-address .footer-title{
     font-weight: bold;
+}
+
+/*
+    Shimmer Effect Styling
+*/
+.shimmer-card-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+    scrollbar-width: none;
+}
+.shimmer-container{
+    border: none;
+    /* height: 550px; */
+    background-color: #f0f0f0;
+}
+.shimmer-image-container img{
+    border: none;
+    outline: none;
+}
+.shimmer-container .shimmer-card-info{
+    background-color: #ebebeb;
+}
+.shimmer-container .card-info .heading-3{
+    width: 100%;
+    height: 30px;
+    background-color: #e4e4e4;
+    margin-top: 10px;
+}
+.shimmer-rating-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.shimmer-rating-time .heading-3 { 
+    max-width: 50px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+.shimmer-container > button{
+    background-color: #e4e4e4;
+    margin-top: 20px;
+    height: 60px;
 }

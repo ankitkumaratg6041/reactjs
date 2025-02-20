@@ -3,3 +3,4 @@ export const LOGO_URL = 'https://img.pikbest.com/png-images/20241030/culinary-re
 export const ACCESS_KEY = 'LonS535z15B1rGJH2rPVWKBPlKUP-hIzFVaw5V7Qz4Q';
 export const SECRET_KEY = 'i04kwPVzu6ZEWCvxJ_5ob7kRAZkFJ0CdqZl2yo6MhdM';
 const applicationId = '711600';
+export const SWIGGY_IMG_URL = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/';
