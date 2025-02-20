@@ -32,26 +32,23 @@ const Body = () => {
 
     if (swiggyJsonData.length === 0) { 
         return (
-            <div className="shimmer-card-container">
                 <Shimmer />
-                <Shimmer />
-                <Shimmer />
-                <Shimmer />
-            </div>
         )
     }
 
-    return (
-        <div>
-            <Search resResult={findRestaurants} resData={swiggyJsonData} />
-            <button className="filter-btn" onClick={filterRestaurants}>Top Rated Restaurants</button>
-            <div className='res-card-container'>
-                {listOfRestaurants?.map((restaurant) => (
-                    <RestaurantContainer key={restaurant.card.card.info.id} resData={restaurant.card.card.info} imgId={restaurant.card.card.info.cloudinaryImageId} />
-                ))}
+    return (swiggyJsonData.length === 0) ?
+        (<Shimmer />): 
+        (
+            <div>
+                <Search resResult={findRestaurants} resData={swiggyJsonData} />
+                <button className="filter-btn" onClick={filterRestaurants}>Top Rated Restaurants</button>
+                <div className='res-card-container'>
+                    {listOfRestaurants?.map((restaurant) => (
+                        <RestaurantContainer key={restaurant.card.card.info.id} resData={restaurant.card.card.info} imgId={restaurant.card.card.info.cloudinaryImageId} />
+                    ))}
+                </div>
             </div>
-        </div>
-    )
+        )
 }
 
 export default Body;
