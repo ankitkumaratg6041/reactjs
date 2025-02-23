@@ -1,0 +1,33 @@
+{
+  "name": "episode-2",
+  "version": "1.0.0",
+  "description": "This is my react app in episode 2",
+  "homepage": "https://github.com/ankitkumaratg6041/reactjs#readme",
+  "bugs": {
+    "url": "https://github.com/ankitkumaratg6041/reactjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitkumaratg6041/reactjs.git"
+  },
+  "license": "ISC",
+  "author": "Ankit Kumar",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.29.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
