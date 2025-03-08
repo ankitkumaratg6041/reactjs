@@ -1,0 +1,4 @@
+export const CDN_URL = 'https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661347444/india-food-butter-chicken/india-food-butter-chicken-1120x732.jpg';
+export const LOGO_URL = 'https://img.pikbest.com/png-images/20241030/culinary-restaurant-logo-design_11027332.png!sw800';
+export const SWIGGY_IMG_URL = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/';
+export const RES_URL = 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId='
