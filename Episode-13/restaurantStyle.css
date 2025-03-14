@@ -1,0 +1,76 @@
+.res-cat-card-container{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 30px auto;
+    position: relative;
+    /* color: aliceblue; */
+}
+/* ✅ Add a semi-transparent overlay using ::before */
+/* .res-cat-card-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: brightness(50%);
+    z-index: 1;
+} */
+
+/* ✅ Make sure content is above the overlay */
+/* .res-cat-card-container h1,
+.res-cat-card-container .details {
+    position: relative;
+    z-index: 2;
+} */
+.cat-info{
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 20px auto;
+    /* position: relative; */
+}
+.cat-info-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.cat-btn{
+    padding: 5px 10px;
+}
+
+.extra-details{
+    border-top: 2px solid black;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+.extra-details::-webkit-scrollbar{
+    display: none;
+}
+.activeClass{
+    max-height: 200px;
+    opacity: 1;
+}
+.notActiveClass{
+    max-height: 0px;
+    opacity: 0;
+}
+.extra-details p{
+    /* border: 1px solid green; */
+    padding: 15px;
+}
+.extra-details p:hover{
+    background-color: beige;
+    cursor: pointer;
+}
